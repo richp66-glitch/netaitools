@@ -159,6 +159,38 @@ export const articles = [
       },
     ],
   },
+  {
+    slug: 'best-ai-tools-for-students',
+    title: 'Best AI Tools for Students',
+    description: 'A practical guide to AI tools that can help students research, study, write, organize, and learn more effectively.',
+    date: 'July 9, 2026',
+    category: 'Education',
+    readTime: '6 min read',
+    intro:
+      'The most useful AI tools for students support learning rather than replace it. Use them to clarify difficult ideas, organize notes, practice, and improve drafts while following your school or instructor rules.',
+    sections: [
+      {
+        heading: 'Best for explanations and study help',
+        body:
+          'ChatGPT, Claude, and Gemini can explain difficult concepts at different levels, create practice questions, and help you identify gaps in your understanding. Ask for step-by-step reasoning, then solve a similar problem yourself.',
+      },
+      {
+        heading: 'Best for research',
+        body:
+          'Perplexity can help you get oriented on a topic and find starting sources. Always open the linked sources, verify important claims, and use your school library or instructor-approved databases for formal research.',
+      },
+      {
+        heading: 'Best for writing and editing',
+        body:
+          'Grammarly and general AI assistants can help with clarity, grammar, outlines, and feedback. Keep your own ideas and voice, and check your course policy before using AI on an assignment.',
+      },
+      {
+        heading: 'How to use AI responsibly',
+        body:
+          'Do not submit generated work as your own, share sensitive personal information, or assume an answer is correct. Use AI as a tutor and editor, verify facts, and keep a record of how you used it when your instructor requires disclosure.',
+      },
+    ],
+  },
 ];
 
 export function getArticle(slug) {
