@@ -13,6 +13,7 @@ export default function AffiliateDisclosurePage() {
         </a>
         <div className="links">
           <a href="/#tools">Browse tools</a>
+          <a href="/articles">Articles</a>
           <a href="/about">About</a>
           <a href="/privacy">Privacy</a>
           <a className="navButton" href="/#newsletter">Weekly picks</a>

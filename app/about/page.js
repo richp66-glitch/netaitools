@@ -34,6 +34,7 @@ export default function AboutPage() {
         <div className="links">
           <a href="/#tools">Browse tools</a>
           <a href="/#categories">Categories</a>
+          <a href="/articles">Articles</a>
           <a href="/privacy">Privacy</a>
           <a className="navButton" href="/#newsletter">Weekly picks</a>
         </div>

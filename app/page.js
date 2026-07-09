@@ -98,6 +98,7 @@ export default function Home() {
         <div className="links">
           <a href="#tools">Browse tools</a>
           <a href="#categories">Categories</a>
+          <a href="/articles">Articles</a>
           <a href="/about">About</a>
           <a className="navButton" href="#newsletter">Weekly picks</a>
         </div>
@@ -246,6 +247,32 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section shell articleBand" id="articles">
+        <div className="sectionHeading">
+          <div>
+            <p className="kicker">Fresh guides</p>
+            <h2>Articles for faster AI tool decisions.</h2>
+          </div>
+          <a className="quietButton" href="/articles">
+            View all articles <ArrowRight size={16} aria-hidden="true" />
+          </a>
+        </div>
+        <div className="articlePreviewGrid">
+          <a className="articlePreview" href="/articles/best-ai-tools-2026">
+            <span>Buying Guide</span>
+            <strong>The 25 Best AI Tools for 2026</strong>
+          </a>
+          <a className="articlePreview" href="/articles/best-free-ai-tools-for-beginners">
+            <span>Beginner Guide</span>
+            <strong>Best Free AI Tools for Beginners</strong>
+          </a>
+          <a className="articlePreview" href="/articles/chatgpt-vs-claude-vs-gemini">
+            <span>Comparison</span>
+            <strong>ChatGPT vs Claude vs Gemini</strong>
+          </a>
+        </div>
+      </section>
+
       <section className="newsletter shell" id="newsletter">
         <div>
           <p className="kicker">Weekly, not noisy</p>
@@ -268,6 +295,7 @@ export default function Home() {
           <p>Clearer choices for useful AI software.</p>
         </div>
         <div className="footerLinks">
+          <a href="/articles">Articles</a>
           <a href="/about">About</a>
           <a href="/privacy">Privacy</a>
           <a href="/affiliate-disclosure">Affiliate Disclosure</a>

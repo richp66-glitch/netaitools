@@ -13,6 +13,7 @@ export default function PrivacyPage() {
         </a>
         <div className="links">
           <a href="/#tools">Browse tools</a>
+          <a href="/articles">Articles</a>
           <a href="/about">About</a>
           <a href="/affiliate-disclosure">Affiliate Disclosure</a>
           <a className="navButton" href="/#newsletter">Weekly picks</a>
