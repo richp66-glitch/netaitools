@@ -6,8 +6,9 @@ export function generateStaticParams() {
   return articles.map((article) => ({ slug: article.slug }));
 }
 
-export function generateMetadata({ params }) {
-  const article = getArticle(params.slug);
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const article = getArticle(slug);
 
   if (!article) {
     return {
@@ -21,8 +22,9 @@ export function generateMetadata({ params }) {
   };
 }
 
-export default function ArticlePage({ params }) {
-  const article = getArticle(params.slug);
+export default async function ArticlePage({ params }) {
+  const { slug } = await params;
+  const article = getArticle(slug);
 
   if (!article) {
     notFound();
