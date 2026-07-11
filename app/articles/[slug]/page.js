@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { articles, getArticle } from '../articles';
 
 export function generateStaticParams() {
@@ -57,6 +57,18 @@ export default async function ArticlePage({ params }) {
             <span>{article.readTime}</span>
           </div>
           <p className="articleIntro">{article.intro}</p>
+          {article.affiliateUrl && (
+            <div className="articleCta">
+              <div>
+                <strong>Start with a voice tool</strong>
+                <p>Test ElevenLabs for natural voiceovers, narration, and dubbing.</p>
+                <small>This is an affiliate link. We may earn a commission at no extra cost to you.</small>
+              </div>
+              <a className="primaryButton" href={article.affiliateUrl} target="_blank" rel="noopener noreferrer">
+                {article.affiliateLabel} <ArrowRight size={15} aria-hidden="true" />
+              </a>
+            </div>
+          )}
         </header>
 
         <div className="articleBody">
