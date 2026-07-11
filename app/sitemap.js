@@ -1,6 +1,6 @@
 import { articles } from './articles/articles';
 
-const siteUrl = 'https://netaitools.com';
+const siteUrl = 'https://www.netaitools.com';
 
 export default function sitemap() {
   const staticRoutes = ['', '/about', '/articles', '/privacy', '/affiliate-disclosure'];
