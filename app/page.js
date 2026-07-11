@@ -71,6 +71,8 @@ function ToolCard({ tool }) {
 export default function Home() {
   const [query, setQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('All');
+  const [email, setEmail] = useState('');
+  const [signupStatus, setSignupStatus] = useState({ type: '', message: '' });
 
   const filteredTools = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
@@ -86,6 +88,29 @@ export default function Home() {
   function chooseCategory(category) {
     setActiveCategory(category);
     document.getElementById('tools')?.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  async function handleNewsletterSubmit(event) {
+    event.preventDefault();
+    setSignupStatus({ type: 'loading', message: 'Submitting...' });
+
+    try {
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Signup failed.');
+      }
+
+      setEmail('');
+      setSignupStatus({ type: 'success', message: result.message });
+    } catch (error) {
+      setSignupStatus({ type: 'error', message: error.message });
+    }
   }
 
   return (
@@ -279,10 +304,13 @@ export default function Home() {
           <h2>Get a short list of worthwhile AI tools.</h2>
           <p>New tools, useful comparisons, and practical ideas for people who want AI to save time instead of creating more tabs.</p>
         </div>
-        <form className="emailForm" onSubmit={(event) => event.preventDefault()}>
-          <input type="email" placeholder="you@example.com" aria-label="Email address" required />
-          <button className="primaryButton" type="submit">Join free</button>
+        <form className="emailForm" onSubmit={handleNewsletterSubmit}>
+          <input type="email" value={email} onChange={(event) => setEmail(event.target.value)} placeholder="you@example.com" aria-label="Email address" required />
+          <button className="primaryButton" type="submit" disabled={signupStatus.type === 'loading'}>
+            {signupStatus.type === 'loading' ? 'Joining...' : 'Join free'}
+          </button>
           <small><ShieldCheck size={13} aria-hidden="true" /> We respect your inbox. Read our <a href="/privacy">privacy policy</a>.</small>
+          {signupStatus.message && <small className={`emailStatus ${signupStatus.type}`} role="status" aria-live="polite">{signupStatus.message}</small>}
         </form>
       </section>
 

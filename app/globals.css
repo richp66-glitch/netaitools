@@ -267,6 +267,9 @@ h2 { margin: 0; color: #18212f; font-size: clamp(28px, 4vw, 42px); line-height: 
 .emailForm input { min-width: 0; padding: 13px; border: 1px solid #c9d5ce; border-radius: 7px; outline: 0; }
 .emailForm small { grid-column: 1 / -1; color: #64748b; font-size: 11px; line-height: 1.4; }
 .emailForm small a { color: #0f7b68; font-weight: 850; }
+.emailStatus { grid-column: 1 / -1; font-weight: 750; }
+.emailStatus.success { color: #0f7b68; }
+.emailStatus.error { color: #a33b2d; }
 .footer { gap: 30px; padding-top: 34px; padding-bottom: 34px; }
 .footer p { margin: 12px 0 0; color: #64748b; font-size: 13px; }
 .footerLinks { display: flex; align-items: center; gap: 20px; color: #64748b; font-size: 13px; font-weight: 720; }

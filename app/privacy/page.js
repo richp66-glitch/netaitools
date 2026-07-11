@@ -42,7 +42,7 @@ export default function PrivacyPage() {
         <section>
           <h2>Cookies and Analytics</h2>
           <p>
-            The site may use cookies, analytics, affiliate tracking, or similar technologies to measure visits, remember preferences, and understand when readers click outbound links.
+            The site may use cookies, analytics, affiliate tracking, a newsletter provider, or similar technologies to measure visits, remember preferences, deliver requested emails, and understand when readers click outbound links.
           </p>
         </section>
 
