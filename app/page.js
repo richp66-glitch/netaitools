@@ -32,7 +32,7 @@ const tools = [
   { name: 'Canva AI', category: 'Images', rating: 4.7, price: 'Free plan', bestFor: 'Fast social graphics, presentations, and marketing designs.', tag: 'Best for beginners', url: 'https://www.canva.com/ai-image-generator/' },
   { name: 'Grammarly', category: 'Writing', rating: 4.7, price: 'Free plan', bestFor: 'Clearer emails, documents, and professional communication.', tag: 'Best editor', url: 'https://www.grammarly.com/' },
   { name: 'Perplexity', category: 'Business', rating: 4.6, price: 'Free plan', bestFor: 'Quick research with linked sources and useful follow-up prompts.', tag: 'Best for research', url: 'https://www.perplexity.ai/' },
-  { name: 'ElevenLabs', category: 'Video', rating: 4.6, price: 'Free tier', bestFor: 'Natural voiceovers, narration, dubbing, and audio content.', tag: 'Best for voice', url: 'https://elevenlabs.io/' },
+  { name: 'ElevenLabs', category: 'Video', rating: 4.6, price: 'Free tier', bestFor: 'Natural voiceovers, narration, dubbing, and audio content.', tag: 'Best for voice', url: 'https://try.elevenlabs.io/7h3i5ade8a1o', affiliate: true },
   { name: 'Cursor', category: 'Coding', rating: 4.6, price: 'Free tier', bestFor: 'AI-assisted coding, refactoring, and codebase questions.', tag: 'Best for developers', url: 'https://www.cursor.com/' },
   { name: 'Jasper', category: 'Marketing', rating: 4.5, price: 'Paid plans', bestFor: 'Campaign planning, brand voice, and marketing content workflows.', tag: 'Best for teams', url: 'https://www.jasper.ai/' },
 ];
@@ -59,7 +59,7 @@ function ToolCard({ tool }) {
       <span className="toolTag">{tool.tag}</span>
       <p className="toolDescription">{tool.bestFor}</p>
       <div className="toolFooter">
-        <span className="price">{tool.price}</span>
+        <span className="price">{tool.price}{tool.affiliate ? ' · Partner link' : ''}</span>
         <a className="textButton" href={tool.url} target="_blank" rel="noopener noreferrer">
           Visit site <ArrowRight size={15} aria-hidden="true" />
         </a>
