@@ -38,9 +38,18 @@ const tools = [
 ];
 
 const evaluationSteps = [
-  'Practical use cases before hype',
-  'Transparent price and plan notes',
-  'Clear tradeoffs for the buyer',
+  {
+    title: 'Practical use cases before hype',
+    detail: 'We focus on the jobs a tool can actually help you complete, not just its newest features.',
+  },
+  {
+    title: 'Transparent price and plan notes',
+    detail: 'We call out free tiers, paid plans, and important limits so the real cost is easier to judge.',
+  },
+  {
+    title: 'Clear tradeoffs for the buyer',
+    detail: 'We explain where a tool fits, where it falls short, and what to test before committing.',
+  },
 ];
 
 function ToolCard({ tool }) {
@@ -263,10 +272,10 @@ export default function Home() {
         </div>
         <div className="standardList">
           {evaluationSteps.map((step, index) => (
-            <div key={step}>
+            <div key={step.title}>
               <span>{String(index + 1).padStart(2, '0')}</span>
-              <strong>{step}</strong>
-              <p>Each recommendation has to help someone make a faster, clearer choice.</p>
+              <strong>{step.title}</strong>
+              <p>{step.detail}</p>
             </div>
           ))}
         </div>
