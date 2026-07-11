@@ -30,6 +30,9 @@ export default function AffiliateDisclosurePage() {
           <p>
             NetAITools may include affiliate links to AI tools, software products, and related services. If you click an affiliate link and make a purchase or start a paid plan, we may earn a commission at no extra cost to you.
           </p>
+          <p>
+            For example, our ElevenLabs recommendation may use a referral link. The link does not change the price you pay, and it does not guarantee a positive review or placement.
+          </p>
         </section>
 
         <section>
