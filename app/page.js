@@ -295,6 +295,10 @@ export default function Home() {
             <span>Comparison</span>
             <strong>ChatGPT vs Claude vs Gemini</strong>
           </a>
+          <a className="articlePreview" href="/articles/elevenlabs-review">
+            <span>Tool Review</span>
+            <strong>ElevenLabs Review: Is It Worth It?</strong>
+          </a>
         </div>
       </section>
 
