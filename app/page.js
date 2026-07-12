@@ -308,6 +308,10 @@ export default function Home() {
             <span>Tool Review</span>
             <strong>ElevenLabs Review: Is It Worth It?</strong>
           </a>
+          <a className="articlePreview" href="/articles/best-ai-tools-for-small-business">
+            <span>Business Guide</span>
+            <strong>Best AI Tools for Small Business</strong>
+          </a>
         </div>
       </section>
 
