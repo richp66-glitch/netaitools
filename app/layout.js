@@ -11,6 +11,7 @@ export const metadata = {
     google: 'yOkADuJjZCJXAl211loOqeSjK-uDvD6u5lw4wj37fG4',
     other: {
       'impact-site-verification': '27fe0c48-c3e2-4bb0-a4a5-7dd7da6dc786',
+      'p:domain_verify': 'c7a932a7379212a7a156b90832277ff3',
     },
   },
 };
