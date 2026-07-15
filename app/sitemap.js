@@ -8,7 +8,7 @@ export default function sitemap() {
 
   return [...staticRoutes, ...articleRoutes].map((route) => ({
     url: `${siteUrl}${route}`,
-    lastModified: new Date('2026-07-09'),
+    lastModified: new Date('2026-07-15'),
     changeFrequency: route.startsWith('/articles/') ? 'monthly' : 'weekly',
     priority: route === '' ? 1 : route.startsWith('/articles/') ? 0.8 : 0.7,
   }));

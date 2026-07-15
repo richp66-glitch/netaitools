@@ -312,6 +312,10 @@ export default function Home() {
             <span>Business Guide</span>
             <strong>Best AI Tools for Small Business</strong>
           </a>
+          <a className="articlePreview" href="/articles/ai-tools-save-small-business-time-money">
+            <span>Business Guide</span>
+            <strong>How AI Tools Can Save Small Business Time and Money</strong>
+          </a>
         </div>
       </section>
 
